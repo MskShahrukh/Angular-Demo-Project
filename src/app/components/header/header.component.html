@@ -1,0 +1,73 @@
+<nav class="navbar sticky ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"
+        ><img src="assets/logo.png" width="70" style="margin-top:-12px"
+      /></a>
+    </div>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a href="#"> Bank Account</a>
+      </li>
+      <li>
+        <a href="#"
+          >N26 You
+          <div class="new-dot"></div>
+        </a>
+      </li>
+      <li>
+        <a href="#"> Metal </a>
+      </li>
+      <li>
+        <a href="#"> N26 Business</a>
+      </li>
+      <li>
+        <a href="#"> Compare plans</a>
+      </li>
+      <li>
+        <a href="#">EN<span class="text-muted">/DE</span> </a>
+      </li>
+      <li style="overflow: hidden">
+        <a
+          href="#"
+          [@accountLinkAnimation]
+          *ngIf="!showOpenAccountBtn; else openAccountBtn"
+        >
+          Open Account
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20.94 21.75"
+              aria-hidden="true"
+              focusable="false"
+              style="width:15px;margin-bottom: -3px; margin-left:5px;"
+            >
+              <path
+                d="M20.94 21.75H6.27a.5.5 0 1 1 0-1h13.67V1H6.27a.5.5 0 0 1 0-1h14.67z"
+              ></path>
+              <path
+                d="M16.28 10.47l-3.67-3.92a.49.49 0 0 0-.71 0 .54.54 0 0 0 0 .74l3 3.17H.5a.52.52 0 0 0 0 1h14.18l-2.79 3a.54.54 0 0 0 0 .74.48.48 0 0 0 .71 0l3.67-3.92a.67.67 0 0 0 0-.81z"
+              ></path>
+            </svg>
+          </span>
+        </a>
+
+        <!-- 
+            [@enterAnimation]
+            [ngClass]="{ transition: showOpenAccountBtn }"
+            [hidden]="!showOpenAccountBtn" -->
+        <ng-template #openAccountBtn>
+          <button
+            [@accountBtnAnimation]
+            [ngClass]="{ transition: showOpenAccountBtn }"
+            [hidden]="!showOpenAccountBtn"
+            class="btn  top-40-m  theme-button m-3"
+          >
+            <small>Open Account</small>
+          </button>
+        </ng-template>
+      </li>
+    </ul>
+  </div>
+</nav>

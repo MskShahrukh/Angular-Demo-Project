@@ -1,0 +1,62 @@
+
+/* This CSS will print because %message-shared is extended. */
+%message-shared
+    // border: 1px solid #ccc
+    border-radius: 10px
+    margin: 10px
+    // margin-left: -15px
+    display: inline
+    // width: 90%
+    padding: 10px
+    color: #333
+    box-shadow: 0px 9px 10px rgba(0,0,0,0.1)
+    font-size: 12px
+    transition: .3s
+    // font-weight: bold
+
+%message-shared:hover
+    box-shadow: 0px 17px 22px rgba(0, 0, 0, 0.1)
+    transition: .3s
+
+// This CSS won't print because %equal-heights is never extended.
+%equal-heights
+    display: flex
+    flex-wrap: wrap
+
+.package-box
+  @extend %message-shared
+.text-muted
+    opacity: 0.2
+ul
+    list-style-type: none
+.bottom-message
+    margin-top: 30px
+.text-paded
+    padding: 5px
+.margin-10
+    margin: 10px
+
+.carousel
+    margin: 10px
+    border-radius: 10px
+    // overflow: hidden
+    box-shadow: 0px 9px 10px rgba(0,0,0,0.1)
+
+.top-40-m
+    margin-top: 40px
+    margin-bottom: 40px
+
+.theme-button
+    color: white
+    background: #4aa28b
+
+.welcome-section
+    padding-top: 90px
+    // padding-bottom: 130px
+
+.carousel-indicators
+    bottom: -40px
+    li
+        border: 2px solid white
+        width: 15px
+        height: 15px

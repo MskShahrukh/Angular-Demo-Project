@@ -1,0 +1,272 @@
+<div>
+  <app-header></app-header>
+
+  <div class="jumbotron text-center welcome-section">
+    <!-- <h1>My First Bootstrap Page</h1> -->
+    <h3><b>Find a plan that works for you.</b></h3>
+    <!-- <small></small> -->
+    <p>Personal Business</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-1 "></div>
+        <div class="col-sm-3">
+          <h3><b>N26</b></h3>
+
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li
+                data-target="#myCarousel"
+                data-slide-to="0"
+                class="active"
+              ></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active">
+                <img
+                  src="https://images.ctfassets.net/q33z48p65a6w/2DqC4xSMtayA6kmOo64I0E/3ffc778485421fda7b68b01f554700e0/n26-cards-mastercard-uk.png?fit=thumb&fm=webp&q=90&w=275"
+                  alt="Los Angeles"
+                  style="width:100%;"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- 
+          
+          
+            [routerLink]="['/open-account', 'N26']"
+            routerLink="/open-account"
+          -->
+
+          <button
+            (click)="openAccount('N26')"
+            class="btn  top-40-m  theme-button"
+          >
+            <small>Open Account</small>
+          </button>
+        </div>
+        <div class="col-sm-3">
+          <h3><b>N26 You</b></h3>
+
+          <div id="myCarousel3" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li
+                data-target="#myCarousel3"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li data-target="#myCarousel3" data-slide-to="1"></li>
+              <li data-target="#myCarousel3" data-slide-to="2"></li>
+              <li data-target="#myCarousel3" data-slide-to="3"></li>
+              <li data-target="#myCarousel3" data-slide-to="4"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active">
+                <img
+                  src="https://images.ctfassets.net/q33z48p65a6w/63bHYeBzGel7qMrWS50qal/643862fbfbd72ca876f384d5ad0944c6/n26-cards-mastercard-petrol-de.png?fit=thumb&fm=webp&q=90&w=275"
+                  alt="Los Angeles"
+                  style="width:100%;"
+                />
+              </div>
+
+              <div class="item">
+                <img
+                  src="https://images.ctfassets.net/q33z48p65a6w/1YbcSNwYlw3Iyr5X829IyL/93601386f27bc5f9f48fc7f9f64c9ff8/n26-cards-mastercard-wheat-de.png?fit=thumb&fm=webp&q=90&w=275"
+                  alt="Chicago"
+                  style="width:100%;"
+                />
+              </div>
+
+              <div class="item">
+                <img
+                  src="https://images.ctfassets.net/q33z48p65a6w/7oZQg0OqfYNupp1lv9g5Cj/e3494d100fd0331940f1b4d5a12de668/n26-cards-mastercard-rhubarb-de.png?fit=thumb&fm=webp&q=90&w=275"
+                  alt="New york"
+                  style="width:100%;"
+                />
+              </div>
+
+              <div class="item">
+                <img
+                  src="https://images.ctfassets.net/q33z48p65a6w/7bHsCLfXHvoqnBWbuSNXQo/932381bf72732b4cf1c082f0cf773ca2/n26-cards-mastercard-teal-de.png?fit=thumb&fm=webp&q=90&w=275"
+                  alt="New york"
+                  style="width:100%;"
+                />
+              </div>
+
+              <div class="item">
+                <img
+                  src="https://images.ctfassets.net/q33z48p65a6w/WRQclrxOxjtVThiH3pm2H/9d0f83f0df7fac785b98e34f84e29c0d/n26-cards-mastercard-raven-de.png?fit=thumb&fm=webp&q=90&w=275"
+                  alt="New york"
+                  style="width:100%;"
+                />
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="btn  top-40-m  theme-button"
+            (click)="openAccount('N26 You')"
+          >
+            <small>Open Account</small>
+          </button>
+        </div>
+        <div class="col-sm-3">
+          <h3><b>N26 Metal</b></h3>
+
+          <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li
+                data-target="#myCarousel2"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li data-target="#myCarousel2" data-slide-to="1"></li>
+              <li data-target="#myCarousel2" data-slide-to="2"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active">
+                <img
+                  src="https://images.ctfassets.net/q33z48p65a6w/4tH5CPvCzm6eWusOuACoaU/bc5e6d4e6ab790cce10052fd55b5e4f1/n26-cards-mastercard-metal-charcoalblack.png?fit=thumb&fm=webp&q=90&w=275"
+                  alt="Los Angeles"
+                  style="width:100%;"
+                />
+              </div>
+
+              <div class="item">
+                <img
+                  src="https://images.ctfassets.net/q33z48p65a6w/1WVYdUNU7q84ISMKMsgwaK/1b64435a702939ea46dbe8938d972df5/n26-cards-mastercard-metal-quartzrose.png?fit=thumb&fm=webp&q=90&w=275"
+                  alt="Chicago"
+                  style="width:100%;"
+                />
+              </div>
+
+              <div class="item">
+                <img
+                  src="https://images.ctfassets.net/q33z48p65a6w/6F8ki0yHtuSUCwEeCeWMq8/792891200a1f50ad300356e798abb9ca/n26-cards-mastercard-metal-slategrey.png?fit=thumb&fm=webp&q=90&w=275"
+                  alt="New york"
+                  style="width:100%;"
+                />
+              </div>
+            </div>
+          </div>
+          <button
+            class="btn top-40-m theme-button"
+            (click)="openAccount('N26 Metal')"
+          >
+            <small>Open account</small>
+          </button>
+        </div>
+
+        <div class="col-sm-1 "></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row" id="packages" #customerPackages>
+      <div class="col-sm-1 "></div>
+      <div class="col-sm-3 package-box">
+        <h2 style="text-align:center">
+          <b>€0.00</b><small class="text-muted">/month</small>
+        </h2>
+        <p></p>
+        <ul>
+          <li class="text-paded">
+            <!-- <span>
+            <svg
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              focusable="false"
+              class="bq em en ck ee ef eg eh ei ej ek el s d-inline-block"
+              style="width:15px;margin-bottom: -3px; margin-left:5px;"
+            >
+              <path
+                fill="currentcolor"
+                d="M5.462 10.553l7.633-7.634a1.198 1.198 0 1 1 1.694 1.694l-8.464 8.466a1.206 1.206 0 0 1-.894.353 1.183 1.183 0 0 1-.821-.344L1.207 9.685a1.199 1.199 0 0 1 1.694-1.694l2.561 2.561v.001z"
+              ></path>
+            </svg>
+          </span> -->
+            Free ATM withdrawals in euros
+          </li>
+          <li class="text-paded">Free payments in any currency</li>
+          <div class="text-muted">
+            <li class="text-paded">Free withdrawals worldwide</li>
+            <li class="text-paded">Allianz insurance package</li>
+            <li class="text-paded">
+              Selected discounts and offers from partner brands
+            </li>
+            <li class="text-paded">
+              Exclusive access to unique Metal Experiences
+            </li>
+            <li class="text-paded">Dedicated Customer Support</li>
+          </div>
+        </ul>
+      </div>
+      <div class="col-sm-3 package-box">
+        <h2 style="text-align:center">
+          <b>€9.90</b><small class="text-muted">/month</small>
+        </h2>
+        <p></p>
+        <ul>
+          <li class="text-paded">Free ATM withdrawals in euros</li>
+          <li class="text-paded">Free payments in any currency</li>
+          <li class="text-paded">Free withdrawals worldwide</li>
+          <li class="text-paded">Allianz insurance package</li>
+          <li class="text-paded">
+            Selected discounts and offers from partner brands
+          </li>
+          <div class="text-muted">
+            <li class="text-paded">
+              Exclusive access to unique Metal Experiences
+            </li>
+            <li class="text-paded">Dedicated Customer Support</li>
+          </div>
+        </ul>
+      </div>
+
+      <div class="col-sm-3 package-box">
+        <h2 style="text-align:center">
+          <b>€16.90</b><small class="text-muted">/month</small>
+        </h2>
+        <p></p>
+        <ul>
+          <li class="text-paded">Free ATM withdrawals in euros</li>
+          <li class="text-paded">Free payments in any currency</li>
+          <li class="text-paded">Free withdrawals worldwide</li>
+          <li class="text-paded">Allianz insurance package</li>
+          <li class="text-paded">
+            Selected discounts and offers from partner brands
+          </li>
+          <li class="text-paded">
+            Exclusive access to unique Metal Experiences
+          </li>
+          <li class="text-paded">Dedicated Customer Support</li>
+        </ul>
+      </div>
+
+      <div class="col-sm-1 "></div>
+    </div>
+
+    <div class="row bottom-message">
+      <div class="col-sm-1 "></div>
+      <div class="col-sm-11 ">
+        <p>
+          <small>
+            Services and Fees for everyone who registers with an address in
+            Germany.
+            <br />
+            For our detailed price list, view PDF <a href="#">here</a></small
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>
