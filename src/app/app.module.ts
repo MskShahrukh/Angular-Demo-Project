@@ -4,10 +4,13 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { PlansComponent } from './pages/plans/plans.component';
-import { OpenAccountComponent } from './pages/open-account/open-account.component';
+import {
+  HeaderComponent,
+  FooterComponent,
+  SliderComponent,
+  CustomPackageComponent
+} from './components/index';
+import { PlansComponent, OpenAccountComponent } from './pages/index';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,9 @@ import { OpenAccountComponent } from './pages/open-account/open-account.componen
     HeaderComponent,
     FooterComponent,
     PlansComponent,
-    OpenAccountComponent
+    OpenAccountComponent,
+    SliderComponent,
+    CustomPackageComponent
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],

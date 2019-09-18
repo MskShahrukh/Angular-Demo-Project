@@ -11,35 +11,36 @@ import { trigger, style, animate, transition } from '@angular/animations';
         style({ transform: 'translateY(100%)', opacity: 0 }),
         animate('300ms', style({ transform: 'translateY(0)', opacity: 1 }))
       ])
-      // transition(':leave', [
-      //   style({ transform: 'translateY(0)', opacity: 1 }),
-      //   animate('200ms', style({ transform: 'translateY(100%)', opacity: 0 }))
-      // ])
     ]),
     trigger('accountLinkAnimation', [
       transition(':enter', [
         style({ transform: 'translateY(-100%)', opacity: 0 }),
         animate('300ms', style({ transform: 'translateY(0)', opacity: 1 }))
       ])
-      // transition(':leave', [
-      //   style({ transform: 'translateY(0)', opacity: 1 }),
-      //   animate('300ms', style({ transform: 'translateY(-200%)', opacity: 0 }))
-      // ])
     ])
   ]
 })
-export class HeaderComponent implements OnInit {
-  constructor() {}
-
+export class HeaderComponent {
   packagesBox: HTMLElement;
   scrollPositionOfPackages: number;
   showOpenAccountBtn: boolean = false;
 
-  ngOnInit() {
+  constructor() {}
+
+  ngAfterViewInit() {
+    this.addListnerOnScroll();
+  }
+
+  // Make a Recursion cause of we are getting Packages id from diffrenet container and once header component is
+  // rendered until that packages if was not created thats why we need to do that
+  addListnerOnScroll() {
     this.packagesBox = document.getElementById('packages');
-    this.packagesBox &&
-      (this.scrollPositionOfPackages = this.packagesBox.offsetTop - 50);
-    window.addEventListener('scroll', this.scroll, true);
+    if (this.packagesBox) {
+      this.scrollPositionOfPackages = this.packagesBox.offsetTop - 50;
+      window.addEventListener('scroll', this.scroll, true);
+    } else {
+      setTimeout(() => this.addListnerOnScroll(), 500);
+    }
   }
 
   scroll = (e): void => {

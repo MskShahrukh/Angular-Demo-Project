@@ -1,0 +1,32 @@
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 769px) {
+  .container {
+    padding: 0;
+  }
+
+  .welcome-area {
+    height: auto;
+    background: #f5f5f5;
+  }
+
+  .packagebox {
+    background: #fff;
+    width: 340px;
+    margin: 0 auto;
+    border-radius: 9px;
+    margin-bottom: 30px;
+  }
+
+  .carousel-inner > .item img {
+    margin: 0 auto;
+  }
+  .grayArea {
+    padding-left: 0;
+    padding-right: 0;
+    background: #fff;
+  }
+  .shadowed-border {
+    box-shadow: none;
+    border-radius: 0;
+  }
+}

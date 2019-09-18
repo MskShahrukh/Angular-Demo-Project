@@ -1,0 +1,35 @@
+<div>
+  <div class="top-div text-center">
+    <b>
+      <h3>
+        <b>{{ package.name }}</b>
+      </h3>
+    </b>
+    <app-slider [images]="package.slides" [index]="i"></app-slider>
+
+    <button (click)="openAccount(package.name)" class="btn theme-button">
+      <small>Open Account</small>
+    </button>
+  </div>
+  <div class="bottom-div">
+    <h2 class="text-center">
+      <b>€{{ package.price }}</b
+      ><small class="text-muted">/month</small>
+    </h2>
+
+    <div class="shadowed-border">
+      <ul class="serviceBullets">
+        <li *ngFor="let service of package.services; let j = index">
+          <div [ngClass]="service.included ? '' : 'text-muted'">
+            <i class="material-icons">
+              done
+            </i>
+          </div>
+          <div [ngClass]="service.included ? '' : 'text-muted'">
+            {{ service.name }}
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

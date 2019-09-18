@@ -1,29 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Packages } from '../../shared/packages';
-declare var $;
 
 @Component({
   selector: 'app-plans',
   templateUrl: './plans.component.html',
-  styleUrls: ['./plans.component.sass']
+  styleUrls: ['./plans.component.sass', './media.css']
 })
-export class PlansComponent implements OnInit {
-  constructor(private router: Router) {}
-
-  customerPackages: HTMLElement;
-  scrollPositionOfPackages: number;
-  showOpenAccountBtn: boolean = false;
-
+export class PlansComponent {
   packages: Array<any> = Packages;
 
-  ngOnInit() {
-    $(window).on('load', function() {
-      $('.carousel').carousel('pause');
-    });
-
-    console.log(this.packages);
-  }
+  constructor(private router: Router) {}
 
   openAccount(val) {
     this.router.navigateByUrl('/open-account/' + val);

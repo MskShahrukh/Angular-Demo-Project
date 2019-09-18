@@ -1,24 +1,22 @@
 
-/* This CSS will print because %message-shared is extended. */
+.container
+    max-width: 1425px!important
+    width: 100%
+
 %message-shared
-    // border: 1px solid #ccc
     border-radius: 10px
     margin: 10px
-    // margin-left: -15px
     display: inline
-    // width: 90%
     padding: 10px
     color: #333
     box-shadow: 0px 9px 10px rgba(0,0,0,0.1)
     font-size: 12px
     transition: .3s
-    // font-weight: bold
 
 %message-shared:hover
     box-shadow: 0px 17px 22px rgba(0, 0, 0, 0.1)
     transition: .3s
 
-// This CSS won't print because %equal-heights is never extended.
 %equal-heights
     display: flex
     flex-wrap: wrap
@@ -39,20 +37,21 @@ ul
 .carousel
     margin: 10px
     border-radius: 10px
-    // overflow: hidden
     box-shadow: 0px 9px 10px rgba(0,0,0,0.1)
 
 .top-40-m
     margin-top: 40px
-    margin-bottom: 40px
+    margin-bottom: 60px
 
 .theme-button
     color: white
     background: #4aa28b
+    margin: 61px 10px 28px
 
 .welcome-section
     padding-top: 90px
-    // padding-bottom: 130px
+
+.packagebox
 
 .carousel-indicators
     bottom: -40px
@@ -60,3 +59,83 @@ ul
         border: 2px solid white
         width: 15px
         height: 15px
+
+.boxes
+    max-width: 300px
+    border: 2px dashed silver
+    margin: 10px
+
+.centered
+    margin-left: 5%
+
+.top-div
+
+.bottom-div
+    margin-top: 60px
+    h2
+        font-size: 38px
+
+.grayArea
+    background: #F5F5F5
+    padding: 50px 90px 40px
+.welcome-area
+    height: 510px
+    padding: 0 60px
+    max-width: 920px
+    margin: 0 auto
+    .title
+        font-size: 31px
+    .slogan
+        font-size: 21px
+
+.cut-top
+
+.shadowed-border
+    transition: 0.2s
+    box-shadow: 0px 9px 10px rgba(0,0,0,0.05)
+    border-radius: 10px
+
+.shadowed-border:hover
+    transition: 0.2s
+    box-shadow: 0px 9px 10px rgba(0,0,0,0.1)
+
+.serviceBullets
+    padding: 15px 20px
+    li
+        padding-left: 33px
+        position: relative
+        margin-bottom: 16px
+
+        i
+            position: absolute
+            left: 0
+            top: 0
+            font-size: 18px
+            color: #4aa28b
+            font-weight: 700
+
+.bottom-text
+    margin: 40px 0px
+
+.mb-20
+    margin-bottom: 20px
+.mb-40
+    margin-bottom: 40px
+.mb-60
+    margin-bottom: 60px
+
+.mt-20
+    margin-top: 20px
+.mt-40
+    margin-top: 40px
+.mt-60
+    margin-top: 60px
+
+.pt-20
+    padding-top: 20px
+.pt-40
+    padding-top: 40px
+.pt-60
+    padding-top: 60px
+
+@import url('./media.css')

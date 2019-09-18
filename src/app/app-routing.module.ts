@@ -1,20 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PlansComponent } from './pages/plans/plans.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { OpenAccountComponent } from './pages/open-account/open-account.component';
+import { PlansComponent, OpenAccountComponent } from './pages/index';
 
 const routes: Routes = [
+  { path: '', component: PlansComponent },
   { path: 'plans', component: PlansComponent },
-  { path: 'footer', component: FooterComponent },
   { path: 'open-account/:id', component: OpenAccountComponent },
-
-  {
-    path: '**',
-    redirectTo: '/plans'
-  }
-  // { path: '*', component: PlansComponent }
-  // {}
+  { path: '**', redirectTo: '/plans' }
 ];
 
 @NgModule({
