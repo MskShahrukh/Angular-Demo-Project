@@ -1,0 +1,18 @@
+@media only screen and (min-width: 2770px) {
+  .container {
+    height: 88vh;
+  }
+}
+
+@media only screen and (min-height: 1150px) {
+  .container {
+    height: 88vh;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .container {
+    padding: 0;
+    height: auto;
+  }
+}

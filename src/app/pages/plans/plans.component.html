@@ -1,36 +1,31 @@
-<div>
-  <div class="container">
-    <div class="grayArea">
-      <div class="row" class="welcome-area">
-        <div class="text-center mb-40 pt-60">
-          <h3 class="title"><b>Find a plan that works for you.</b></h3>
-          <p class="slogan">Personal Business</p>
+<div class="container">
+  <div class="grayArea">
+    <div class="row" class="welcome-area">
+      <div class="text-center mb-40 pt-60">
+        <h3 class="title"><b>Find a plan that works for you.</b></h3>
+        <p class="slogan">Personal Business</p>
+      </div>
+      <div id="packages"></div>
+      <div class="row">
+        <div
+          *ngFor="let package of packages; let i = index"
+          class="col-sm-4 col-md-4 packagebox"
+        >
+          <app-custom-package [package]="package" [i]="i"></app-custom-package>
         </div>
-        <div id="packages"></div>
-        <div class="row">
-          <div
-            *ngFor="let package of packages; let i = index"
-            class="col-sm-4 col-md-4 packagebox"
-          >
-            <app-custom-package
-              [package]="package"
-              [i]="i"
-            ></app-custom-package>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="bottom-text">
-              <p>
-                <small>
-                  Services and Fees for everyone who registers with an address
-                  in Germany.
-                  <br />
-                  For our detailed price list, view PDF
-                  <a href="#">here</a></small
-                >
-              </p>
-            </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="bottom-text">
+            <p>
+              <small>
+                Services and Fees for everyone who registers with an address in
+                Germany.
+                <br />
+                For our detailed price list, view PDF
+                <a href="#">here</a></small
+              >
+            </p>
           </div>
         </div>
       </div>

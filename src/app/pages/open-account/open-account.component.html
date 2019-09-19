@@ -1,7 +1,20 @@
-<div>
-  <div class="container ">
-    <div class="jumbotron text-center route-box">
-      <h2>{{ routeID }}</h2>
+<div class="container">
+  <div class="jumbotron text-center route-box">
+    <h2>{{ routeID }}</h2>
+    <br />
+    <code> GRAPHQL Below...</code>
+    <h4 class="text-left">Currency rates</h4>
+
+    <div *ngIf="loading">
+      Loading...
+    </div>
+    <div *ngIf="error">
+      Error :(
+    </div>
+    <div *ngIf="rates" class="text-left currencies-box">
+      <div *ngFor="let rate of rates">
+        <p>{{ rate.currency }}: {{ rate.rate }}</p>
+      </div>
     </div>
   </div>
 </div>

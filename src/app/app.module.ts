@@ -11,6 +11,8 @@ import {
   CustomPackageComponent
 } from './components/index';
 import { PlansComponent, OpenAccountComponent } from './pages/index';
+import { GraphQLModule } from './graphql.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,7 @@ import { PlansComponent, OpenAccountComponent } from './pages/index';
     SliderComponent,
     CustomPackageComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, GraphQLModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
 })
