@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-declare let $;
+declare var $;
 
 @Component({
   selector: 'app-slider',

@@ -34,9 +34,9 @@ export class HeaderComponent {
   // Make a Recursion cause of we are getting Packages id from diffrenet container and once header component is
   // rendered until that packages if was not created thats why we need to do that
   addListnerOnScroll() {
-    this.packagesBox = document.getElementById('packages');
+    this.packagesBox = document.getElementById('package-detials-0');
     if (this.packagesBox) {
-      this.scrollPositionOfPackages = this.packagesBox.offsetTop - 50;
+      this.scrollPositionOfPackages = this.packagesBox.offsetTop + 120;
       window.addEventListener('scroll', this.scroll, true);
     } else {
       setTimeout(() => this.addListnerOnScroll(), 500);

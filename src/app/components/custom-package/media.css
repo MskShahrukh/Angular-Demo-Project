@@ -1,0 +1,6 @@
+@media only screen and (max-width: 769px) {
+  .shadowed-border {
+    box-shadow: none !important;
+    border-radius: 0;
+  }
+}

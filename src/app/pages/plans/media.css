@@ -4,7 +4,6 @@
   }
 }
 
-/* Smartphones (portrait) ----------- */
 @media only screen and (max-width: 769px) {
   .container {
     padding: 0;
@@ -18,14 +17,18 @@
 
   .packagebox {
     background: #fff;
-    width: 340px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 40px 15px;
     border-radius: 9px;
-    margin-bottom: 30px;
+    padding: 10px;
+    margin-left: 0px;
   }
 
   .carousel-inner > .item img {
     margin: 0 auto;
+  }
+  .carousel-inner {
+    margin: 30px;
   }
   .grayArea {
     padding-left: 0;
