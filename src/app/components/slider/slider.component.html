@@ -1,4 +1,9 @@
-<div id="{{ sliderName }}" class="carousel slide" data-ride="carousel">
+<div
+  *ngIf="images && images.length > 0"
+  id="{{ sliderName }}"
+  class="carousel slide"
+  data-ride="carousel"
+>
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <ng-container *ngFor="let image of images; let i = index">

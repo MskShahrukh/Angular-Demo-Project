@@ -1,14 +1,14 @@
 <div class="container">
   <div class="jumbotron text-center route-box">
-    <h2>{{ routeID }}</h2>
+    <h2 class="route-id">{{ routeID }}</h2>
     <br />
     <code> GRAPHQL Below...</code>
     <h4 class="text-left">Currency rates</h4>
 
-    <div *ngIf="loading">
+    <div *ngIf="loading" class="loading-gql">
       Loading...
     </div>
-    <div *ngIf="error">
+    <div *ngIf="error" class="error-gql">
       Error :(
     </div>
     <div *ngIf="rates" class="text-left currencies-box">

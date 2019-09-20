@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,7 +13,6 @@ import {
 } from './components/index';
 import { PlansComponent, OpenAccountComponent } from './pages/index';
 import { GraphQLModule } from './graphql.module';
-import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,15 @@ import { HttpClientModule } from '@angular/common/http';
     SliderComponent,
     CustomPackageComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, GraphQLModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    GraphQLModule,
+    HttpClientModule
+  ],
+  exports: [HeaderComponent, FooterComponent],
+
   providers: [],
   bootstrap: [AppComponent]
 })
